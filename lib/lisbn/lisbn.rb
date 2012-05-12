@@ -1,20 +1,16 @@
-class Lisbn
-  attr_reader :isbn
-
-  def initialize(isbn_string)
-    @isbn = strip(isbn_string)
+class Lisbn < String
+  def isbn
+    upcase.gsub(/[^0-9X]/, '')
   end
 
   def valid?
-    @valid ||= begin
-      case isbn.length
-        when 10
-          valid_isbn_10?
-        when 13
-          valid_isbn_13?
-        else
-          false
-      end
+    case isbn.length
+      when 10
+        valid_isbn_10?
+      when 13
+        valid_isbn_13?
+      else
+        false
     end
   end
 
@@ -22,17 +18,17 @@ class Lisbn
     return unless valid?
     return isbn if isbn.length == 10
 
-    @isbn10 ||= isbn[3..-2] + isbn_10_checksum
+    isbn[3..-2] + isbn_10_checksum
   end
 
   def isbn13
     return unless valid?
     return isbn if isbn.length == 13
 
-    @isbn13 ||= '978' + isbn[0..-2] + isbn_13_checksum
+    '978' + isbn[0..-2] + isbn_13_checksum
   end
 
-  def split
+  def parts
     return unless isbn13
 
     group = prefix = nil
@@ -60,11 +56,9 @@ class Lisbn
     [group[0..2], group[3..-1], prefix, isbn13[(group.length + prefix.length)..-2], isbn13[-1..-1]]
   end
 
-private
+  cache_method :isbn, :valid?, :isbn10, :isbn13, :parts
 
-  def strip(string)
-    string.upcase.gsub(/[^0-9X]/, '')
-  end
+private
 
   def isbn_10_checksum
     base = isbn.length == 13 ? isbn[3..-2] : isbn[0..-2]

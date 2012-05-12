@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe "Lisbn" do
-  describe "#initialize" do
-    it "converts the passed ISBN to just digits and X" do
+  describe "#isbn" do
+    it "converts the string to just digits and X" do
       isbn = Lisbn.new("9487-028asdfasdf878X7")
       isbn.isbn.should == "9487028878X7"
     end
@@ -95,21 +95,29 @@ describe "Lisbn" do
     end
   end
 
-  describe "#split" do
+  describe "#parts" do
     subject { Lisbn.new("9780000000002") }
 
     it "splits into the right groups" do
-      subject.split.should == ["978", "0", "00", "000000", "2"]
+      subject.parts.should == ["978", "0", "00", "000000", "2"]
     end
 
     it "works with long groups" do
       lisbn = Lisbn.new("9786017002015")
-      lisbn.split.should == ["978", "601", "7002", "01", "5"]
+      lisbn.parts.should == ["978", "601", "7002", "01", "5"]
     end
 
     it "returns nil if it can't find a valid group" do
       lisbn = Lisbn.new("9780100000002")
-      lisbn.split.should be_nil
+      lisbn.parts.should be_nil
+    end
+  end
+
+  describe "retains normal string methods" do
+    subject { Lisbn.new("9780000000002") }
+
+    it "#splits" do
+      subject.split("7").should == ["9", "80000000002"]
     end
   end
 end
