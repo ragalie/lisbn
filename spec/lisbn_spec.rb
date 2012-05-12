@@ -63,6 +63,12 @@ describe "Lisbn" do
       subject.isbn10.should be_nil
     end
 
+    it "returns nil if the ISBN is 13-digits and isn't in the 978 GS1" do
+      lisbn = Lisbn.new("9790000000003")
+      lisbn.stub(:valid? => true)
+      lisbn.isbn10.should be_nil
+    end
+
     it "computes the ISBN10 checksum" do
       subject.isbn10.should == "0000000000"
     end

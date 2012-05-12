@@ -17,6 +17,7 @@ class Lisbn < String
   def isbn10
     return unless valid?
     return isbn if isbn.length == 10
+    return unless isbn[0..2] == "978"
 
     isbn[3..-2] + isbn_10_checksum
   end
