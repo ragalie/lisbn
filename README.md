@@ -1,6 +1,7 @@
 # Lisbn
 
-TODO: Write a gem description
+Lisbn (pronounced "Lisbon") is a wrapper around String that adds methods for manipulating
+[ISBNs](http://en.wikipedia.org/wiki/International_Standard_Book_Number).
 
 ## Installation
 
@@ -18,7 +19,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Instantiate a new Lisbn object:
+
+    > isbn = Lisbn.new("9780000000002")
+
+You can check its validity:
+
+    > isbn.valid?
+     => true
+
+You can convert it to ISBN-10 or ISBN-13:
+
+    > isbn.isbn10
+     => "0000000000"
+
+    > isbn.isbn13
+     => "9780000000002"
+
+And you can break it up into its GS1 prefix, group identifier, prefix/publisher code,
+item number and check digit:
+
+    > isbn.parts
+     => ["978", "0", "00", "000000", "2"]
 
 ## Contributing
 

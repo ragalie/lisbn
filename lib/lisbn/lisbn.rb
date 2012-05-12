@@ -1,8 +1,10 @@
 class Lisbn < String
+  # Returns a normalized ISBN form
   def isbn
     upcase.gsub(/[^0-9X]/, '')
   end
 
+  # Returns true if the ISBN is valid, false otherwise.
   def valid?
     case isbn.length
       when 10
@@ -14,6 +16,8 @@ class Lisbn < String
     end
   end
 
+  # Returns a valid ISBN in ISBN-10 format.
+  # Returns nil if the ISBN is invalid or incapable of conversion to ISBN-10.
   def isbn10
     return unless valid?
     return isbn if isbn.length == 10
@@ -22,6 +26,8 @@ class Lisbn < String
     isbn[3..-2] + isbn_10_checksum
   end
 
+  # Returns a valid ISBN in ISBN-13 format.
+  # Returns nil if the ISBN is invalid.
   def isbn13
     return unless valid?
     return isbn if isbn.length == 13
@@ -29,6 +35,16 @@ class Lisbn < String
     '978' + isbn[0..-2] + isbn_13_checksum
   end
 
+  # Returns an Array with the 'parts' of the ISBN-13 in left-to-right order.
+  # The parts of an ISBN are as follows:
+  #   - GS1 prefix
+  #   - Group identifier
+  #   - Prefix/publisher code
+  #   - Item number
+  #   - Check digit
+  #
+  # Returns nil if the ISBN is not valid.
+  # Returns nil if the group and prefix cannot be identified.
   def parts
     return unless isbn13
 

@@ -3,7 +3,8 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Mike Ragalie"]
   gem.email         = ["michael.ragalie@verbasoftware.com"]
   gem.description   = %q{ISBN manipulation helpers}
-  gem.summary       = %q{Provides methods for converting between ISBN-10 and ISBN-13, checking validity and hyphenating ISBNs}
+  gem.summary       = %q{Provides methods for converting between ISBN-10 and ISBN-13,
+                         checking validity and splitting ISBNs into groups and prefixes}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
