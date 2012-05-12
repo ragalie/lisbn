@@ -14,6 +14,16 @@ describe "Lisbn" do
       isbn.valid?.should be_true
     end
 
+    it "recognizes a valid ISBN10 with X checksum" do
+      isbn = Lisbn.new("160459411X")
+      isbn.valid?.should be_true
+    end
+
+    it "recognizes a valid ISBN10 with 0 checksum" do
+      isbn = Lisbn.new("0679405070")
+      isbn.valid?.should be_true
+    end
+
     it "recognizes an invalid ISBN10" do
       isbn = Lisbn.new("0123546789")
       isbn.valid?.should be_false
@@ -21,6 +31,11 @@ describe "Lisbn" do
 
     it "recognizes a valid ISBN13" do
       isbn = Lisbn.new("9780000000002")
+      isbn.valid?.should be_true
+    end
+
+    it "recognizes a valid ISBN13 with 0 checksum" do
+      isbn = Lisbn.new("9780062870780")
       isbn.valid?.should be_true
     end
 
@@ -40,6 +55,26 @@ describe "Lisbn" do
     end
   end
 
+  describe "#isbn10" do
+    subject { Lisbn.new("9780000000002") }
+
+    it "returns nil if invalid" do
+      subject.stub(:valid? => false)
+      subject.isbn10.should be_nil
+    end
+
+    it "computes the ISBN10 checksum" do
+      subject.isbn10.should == "0000000000"
+    end
+
+    it "returns the isbn if it's 10 digits" do
+      lisbn = Lisbn.new("0000000000")
+      lisbn.stub(:valid? => true)
+      lisbn.should_not_receive(:isbn_10_checksum)
+      lisbn.isbn10.should == "0000000000"
+    end
+  end
+
   describe "#isbn13" do
     subject { Lisbn.new("0000000000") }
 
@@ -54,7 +89,8 @@ describe "Lisbn" do
 
     it "returns the isbn if it's 13 digits" do
       lisbn = Lisbn.new("9780000000002")
-      lisbn.should_receive(:isbn_13_checksum).once.and_return("2")
+      lisbn.stub(:valid? => true)
+      lisbn.should_not_receive(:isbn_13_checksum)
       lisbn.isbn13.should == "9780000000002"
     end
   end
@@ -64,6 +100,11 @@ describe "Lisbn" do
 
     it "splits into the right groups" do
       subject.split.should == ["978", "0", "00", "000000", "2"]
+    end
+
+    it "works with long groups" do
+      lisbn = Lisbn.new("9786017002015")
+      lisbn.split.should == ["978", "601", "7002", "01", "5"]
     end
 
     it "returns nil if it can't find a valid group" do

@@ -18,6 +18,13 @@ class Lisbn
     end
   end
 
+  def isbn10
+    return unless valid?
+    return isbn if isbn.length == 10
+
+    @isbn10 ||= isbn[3..-2] + isbn_10_checksum
+  end
+
   def isbn13
     return unless valid?
     return isbn if isbn.length == 13
@@ -34,9 +41,9 @@ class Lisbn
       next unless isbn13.match("^#{g}")
       group = g
 
-      pre_loc = 3 + group.length
+      pre_loc = group.length
       prefixes.each do |p|
-        number = isbn13[pre_loc..(pre_loc + p[:length])].to_i
+        number = isbn13.slice(pre_loc, p[:length]).to_i
         next unless p[:range].include?(number)
 
         prefix = p.merge(:number => number)
@@ -50,7 +57,7 @@ class Lisbn
     return unless group && prefix
 
     prefix = sprintf("%0#{prefix[:length]}d", prefix[:number])
-    [group[0..2], group[3..3], prefix, isbn13[(group.length + prefix.length)..-2], isbn13[-1..-1]]
+    [group[0..2], group[3..-1], prefix, isbn13[(group.length + prefix.length)..-2], isbn13[-1..-1]]
   end
 
 private
@@ -59,14 +66,22 @@ private
     string.upcase.gsub(/[^0-9X]/, '')
   end
 
-  def valid_isbn_10?
-    return false unless isbn.match(/^[0-9]{9}[0-9X]$/)
+  def isbn_10_checksum
+    base = isbn.length == 13 ? isbn[3..-2] : isbn[0..-2]
 
-    products = isbn.each_char.each_with_index.map do |chr, i|
-      (chr == 'X' ? 10 : chr.to_i) * (10 - i)
+    products = base.each_char.each_with_index.map do |chr, i|
+      chr.to_i * (10 - i)
     end
 
-    products.inject(0) {|m, v| m + v} % 11 == 0
+    remainder = products.inject(0) {|m, v| m + v} % 11
+    case remainder
+      when 0
+        0
+      when 1
+        'X'
+      else
+        11 - remainder
+    end.to_s
   end
 
   def isbn_13_checksum
@@ -76,7 +91,13 @@ private
       chr.to_i * (i % 2 == 0 ? 1 : 3)
     end
 
-    (10 - products.inject(0) {|m, v| m + v} % 10).to_s
+    remainder = products.inject(0) {|m, v| m + v} % 10
+    (remainder == 0 ? 0 : 10 - remainder).to_s
+  end
+
+  def valid_isbn_10?
+    return false unless isbn.match(/^[0-9]{9}[0-9X]$/)
+    isbn[-1..-1] == isbn_10_checksum
   end
 
   def valid_isbn_13?
