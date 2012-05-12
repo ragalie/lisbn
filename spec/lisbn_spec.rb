@@ -113,6 +113,12 @@ describe "Lisbn" do
     end
   end
 
+  describe "ranges" do
+    it "skips over invalid '0-length' ranges" do
+      Lisbn::RANGES.values.flatten.map {|v| v[:length]}.should_not include(0)
+    end
+  end
+
   describe "retains normal string methods" do
     subject { Lisbn.new("9780000000002") }
 

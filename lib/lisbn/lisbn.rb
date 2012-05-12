@@ -100,13 +100,15 @@ private
   end
 
   def self.ranges
-    rngs = Hash.from_xml(File.read(File.dirname(__FILE__) + '/../../data/RangeMessage.xml'))
-    Array.wrap(rngs["ISBNRangeMessage"]["RegistrationGroups"]["Group"]).inject({}) do |memo, group|
+    rngs = Nori.parse(File.read(File.dirname(__FILE__) + '/../../data/RangeMessage.xml'))
+    Array(rngs["ISBNRangeMessage"]["RegistrationGroups"]["Group"]).flatten.inject({}) do |memo, group|
       prefix = group["Prefix"].gsub(/-/, '')
-      ranges = Array.wrap(group["Rules"]["Rule"]).map do |rule|
+      ranges = Array(group["Rules"]["Rule"]).flatten.map do |rule|
         length = rule["Length"].to_i
+        next unless length > 0
+
         {:range => Range.new(*rule["Range"].split("-").map {|r| r[0..(length - 1)].to_i }), :length => length}
-      end
+      end.compact
 
       memo.update(prefix => ranges)
     end
