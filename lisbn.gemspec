@@ -14,6 +14,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = "0.1.2"
 
-  gem.add_dependency "nori"
+  gem.add_dependency "nori", "~> 2.0"
+  gem.add_dependency "nokogiri"
   gem.add_development_dependency "rspec"
 end

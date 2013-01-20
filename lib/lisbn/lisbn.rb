@@ -117,7 +117,7 @@ private
   end
 
   def self.ranges
-    rngs = parse
+    rngs = Nori.new.parse(File.read(File.dirname(__FILE__) + '/../../data/RangeMessage.xml'))
     Array(rngs["ISBNRangeMessage"]["RegistrationGroups"]["Group"]).flatten.inject({}) do |memo, group|
       prefix = group["Prefix"].gsub(/-/, '')
       ranges = Array(group["Rules"]["Rule"]).flatten.map do |rule|
@@ -129,16 +129,6 @@ private
 
       memo.update(prefix => ranges)
     end
-  end
-
-  # Some gems (read: savon) modify Nori's .convert_tags_to option.
-  # We save the modification, reset to defaults and reinstate after parsing.
-  def self.parse
-    conversion = Nori.convert_tags?
-    Nori.convert_tags_to(nil)
-    rngs = Nori.parse(File.read(File.dirname(__FILE__) + '/../../data/RangeMessage.xml'))
-    Nori.convert_tags_to(nil, &conversion)
-    rngs
   end
 
   RANGES = ranges
