@@ -132,4 +132,19 @@ describe "Lisbn" do
       subject.split("7").should == ["9", "80000000002"]
     end
   end
+
+  describe ".extract" do
+    it "should find two ISBN-13s in this sentence and return an array" do
+      isbns = Lisbn.extract("Hi, I'm looking for 9780000000002 or 978-601-7002-01-5.")
+      isbns.should be_kind_of(Array)
+      isbns.size.should == 2
+      isbns[0].should == "9780000000002"
+      isbns[1].isbn.should == "9786017002015"
+    end
+
+    it "should return an empty array" do
+      Lisbn.extract("nothing to see here").should == []
+    end
+  end
+
 end
