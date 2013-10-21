@@ -1,10 +1,18 @@
 class Lisbn < String
 
   # Find an ISBN in a string of text
-  def self.extract(string)
-    string.scan(/([\dX-]{10,18})/i).flatten.map do |match|
-      isbn = new(match)
-      isbn.valid? ? isbn : nil
+  def scan_isbns
+    scan(/([\dX-]{10,})/i).flatten.map do |match|
+      isbn = self.class.new(match)
+      if isbn.valid?
+        if block_given?
+          yield isbn
+        else
+          isbn
+        end
+      else
+        nil
+      end
     end.compact
   end
 
