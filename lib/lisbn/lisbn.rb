@@ -73,10 +73,6 @@ class Lisbn < String
     [group[0..2], group[3..-1], prefix, isbn13[(group.length + prefix.length)..-2], isbn13[-1..-1]]
   end
 
-  cache_method :isbn, :valid?, :isbn10, :isbn13, :parts
-
-private
-
   def isbn_10_checksum
     base = isbn.length == 13 ? isbn[3..-2] : isbn[0..-2]
 
@@ -105,6 +101,10 @@ private
     remainder = products.inject(0) {|m, v| m + v} % 10
     (remainder == 0 ? 0 : 10 - remainder).to_s
   end
+
+  cache_method :isbn, :valid?, :isbn10, :isbn13, :parts, :isbn_10_checksum, :isbn_13_checksum
+
+private
 
   def valid_isbn_10?
     return false unless isbn.match(/^[0-9]{9}[0-9X]$/)
