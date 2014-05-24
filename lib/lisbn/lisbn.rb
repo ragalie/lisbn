@@ -116,20 +116,5 @@ private
     isbn[-1..-1] == isbn_13_checksum
   end
 
-  def self.ranges
-    rngs = Nori.new.parse(File.read(File.dirname(__FILE__) + '/../../data/RangeMessage.xml'))
-    Array(rngs["ISBNRangeMessage"]["RegistrationGroups"]["Group"]).flatten.inject({}) do |memo, group|
-      prefix = group["Prefix"].gsub(/-/, '')
-      ranges = Array(group["Rules"]["Rule"]).flatten.map do |rule|
-        length = rule["Length"].to_i
-        next unless length > 0
-
-        {:range => Range.new(*rule["Range"].split("-").map {|r| r[0..(length - 1)].to_i }), :length => length}
-      end.compact
-
-      memo.update(prefix => ranges)
-    end
-  end
-
-  RANGES = ranges
+  RANGES = YAML::load_file(File.dirname(__FILE__) + "/../../data/ranges.yml")
 end

@@ -41,6 +41,15 @@ item number and check digit:
 
     > isbn.parts
      => ["978", "0", "00", "000000", "2"]
+     
+## Updating
+
+You can update the ISBN ranges by replacing the RangeMessage.xml file with an
+updated copy from: https://www.isbn-international.org/range_file_generation
+
+Then run:
+
+    > rake save_ranges_to_yaml
 
 ## Contributing
 

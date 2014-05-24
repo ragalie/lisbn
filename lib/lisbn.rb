@@ -1,3 +1,5 @@
 require 'nori'
-require "lisbn/cache_method"
-require "lisbn/lisbn"
+require 'yaml'
+require_relative "lisbn/cache_method"
+require_relative "lisbn/lisbn"
+require_relative "lisbn/ranges"
