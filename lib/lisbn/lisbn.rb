@@ -16,6 +16,16 @@ class Lisbn < String
     end
   end
 
+  def isbn_with_dash
+    if valid_isbn_13? && parts
+      parts.join("-")
+    elsif isbn.length > 2
+      isbn.first + "-" + isbn[1..-1].to_s
+    else
+      isbn
+    end
+  end
+
   # Returns a valid ISBN in ISBN-10 format.
   # Returns nil if the ISBN is invalid or incapable of conversion to ISBN-10.
   def isbn10
