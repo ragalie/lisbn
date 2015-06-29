@@ -55,6 +55,34 @@ describe "Lisbn" do
     end
   end
 
+  describe "#isbn_with_dash" do
+    subject { Lisbn.new(isbn) }
+
+    context "with a 13-digit ISBN" do
+      let(:isbn) { "9781402780592" }
+
+      it "returns the isbn with dashes between the parts" do
+        expect(subject.isbn_with_dash).to eq("978-1-4027-8059-2")
+      end
+    end
+
+    context "with a 10-digit ISBN" do
+      let(:isbn) { "1402780591" }
+
+      it "returns the isbn with a dash before the checkdigit" do
+        expect(subject.isbn_with_dash).to eq("140278059-1")
+      end
+    end
+
+    context "with a very short ISBN" do
+      let(:isbn) { "123" }
+
+      it "returns the isbn" do
+        expect(subject.isbn_with_dash).to eq(isbn)
+      end
+    end
+  end
+
   describe "#isbn10" do
     subject { Lisbn.new("9780000000002") }
 
