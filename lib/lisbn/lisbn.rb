@@ -19,8 +19,8 @@ class Lisbn < String
   def isbn_with_dash
     if valid_isbn_13? && parts
       parts.join("-")
-    elsif isbn.length > 2
-      isbn.first + "-" + isbn[1..-1].to_s
+    elsif isbn.length > 3
+      isbn[0..-2] + "-" + isbn.last
     else
       isbn
     end
