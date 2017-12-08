@@ -8,7 +8,7 @@ class Lisbn < String
       ranges = xml["ISBNRangeMessage"]["RegistrationGroups"]["Group"]
 
       hash = Array(ranges).flatten.inject({}) do |memo, group|
-        prefix = group["Prefix"].gsub(/-/, '')
+        prefix = group["Prefix"].gsub(/-/, '').to_s
         ranges = Array(group["Rules"]["Rule"]).flatten.map do |rule|
           length = rule["Length"].to_i
           next unless length > 0
