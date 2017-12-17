@@ -11,47 +11,47 @@ describe "Lisbn" do
   describe "#valid?" do
     it "recognizes a valid ISBN10" do
       isbn = Lisbn.new("0123456789")
-      isbn.valid?.should be_true
+      isbn.valid?.should be true
     end
 
     it "recognizes a valid ISBN10 with X checksum" do
       isbn = Lisbn.new("160459411X")
-      isbn.valid?.should be_true
+      isbn.valid?.should be true
     end
 
     it "recognizes a valid ISBN10 with 0 checksum" do
       isbn = Lisbn.new("0679405070")
-      isbn.valid?.should be_true
+      isbn.valid?.should be true
     end
 
     it "recognizes an invalid ISBN10" do
       isbn = Lisbn.new("0123546789")
-      isbn.valid?.should be_false
+      isbn.valid?.should be false
     end
 
     it "recognizes a valid ISBN13" do
       isbn = Lisbn.new("9780000000002")
-      isbn.valid?.should be_true
+      isbn.valid?.should be true
     end
 
     it "recognizes a valid ISBN13 with 0 checksum" do
       isbn = Lisbn.new("9780062870780")
-      isbn.valid?.should be_true
+      isbn.valid?.should be true
     end
 
     it "recognizes an invalid ISBN13" do
       isbn = Lisbn.new("9780000000003")
-      isbn.valid?.should be_false
+      isbn.valid?.should be false
     end
 
     it "returns false for improperly-formatted ISBNs" do
       isbn = Lisbn.new("97800000X0002")
-      isbn.valid?.should be_false
+      isbn.valid?.should be false
     end
 
     it "regards anything not 10 or 13 digits as invalid" do
       isbn = Lisbn.new("")
-      isbn.valid?.should be_false
+      isbn.valid?.should be false
     end
   end
 
