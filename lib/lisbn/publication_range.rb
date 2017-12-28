@@ -1,5 +1,6 @@
 class Lisbn < String
   class PublicationRange
+    include Enumerable
     def initialize(seed_isbn13)
       @seed_isbn13 = Lisbn.new(seed_isbn13)
     end
@@ -24,8 +25,10 @@ class Lisbn < String
       (0..(number_of_publications-1))
     end
 
-    def isbn13s
-      (from_prefix..to_prefix).to_a.map{|i| Lisbn.new((i*10).to_s).isbn13_checksum_corrected}
+    def each
+      (from_prefix..to_prefix).each do |isbn|
+        yield Lisbn.new((isbn*10).to_s).isbn13_checksum_corrected
+      end
     end
 
     private

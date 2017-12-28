@@ -180,8 +180,11 @@ describe "Lisbn" do
       subject.to_s.should == "978-601-7002-00-8..978-601-7002-99-2"
     end
 
-    it "returns the range of isbns" do
-      subject.isbn13s.should == [
+    it "returns an enumerable of isbns" do
+      subject.min.should == "9786017002008"
+      subject.max.should == "9786017002992"
+
+      subject.map{|x| x}.should == [
         "9786017002008",
         "9786017002015",
         "9786017002022",
