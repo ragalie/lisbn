@@ -36,12 +36,26 @@ You can convert it to ISBN-10 or ISBN-13:
     > isbn.isbn13
      => "9780000000002"
 
-And you can break it up into its GS1 prefix, group identifier, prefix/publisher code,
+You can break it up into its GS1 prefix, group identifier, prefix/publisher code,
 item number and check digit:
 
     > isbn.parts
      => ["978", "0", "00", "000000", "2"]
-     
+
+You can generate the complete range of ISBNs for a registrant element, using the publisher_range object:
+
+    > isbn.publisher_range.isbn13s
+     => ["9786017002008", "9786017002015", "9786017002022", .. "9786017002992"]
+
+You can create a publication range object directly:
+
+    > Lisbn::PublicationRange.new("9786017002008")
+
+You can see the range as a string representation:
+
+    > Lisbn::PublicationRange.new("9786017002008").to_s
+     => "978-601-7002-00-8..978-601-7002-99-2"
+
 ## Updating
 
 You can update the ISBN ranges by replacing the RangeMessage.xml file with an

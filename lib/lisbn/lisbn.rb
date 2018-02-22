@@ -45,6 +45,16 @@ class Lisbn < String
     '978' + isbn[0..-2] + isbn_13_checksum
   end
 
+  def isbn13_checksum_corrected
+    return nil unless isbn.length == 13
+    isbn[0..-2] + isbn_13_checksum
+  end
+
+  def publication_range
+    return unless isbn13
+    PublicationRange.new(isbn13)
+  end
+
   # Returns an Array with the 'parts' of the ISBN-13 in left-to-right order.
   # The parts of an ISBN are as follows:
   #   - GS1 prefix
