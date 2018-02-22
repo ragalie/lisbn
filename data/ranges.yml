@@ -966,6 +966,12 @@
     end: 99999
     excl: false
   :length: 5
+'978622':
+- :range: !ruby/range
+    begin: 0
+    end: 3
+    excl: false
+  :length: 2
 '9787':
 - :range: !ruby/range
     begin: 0

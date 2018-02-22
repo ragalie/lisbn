@@ -96,30 +96,48 @@ class Lisbn < String
   def isbn_10_checksum
     base = isbn.length == 13 ? isbn[3..-2] : isbn[0..-2]
 
-    products = base.each_char.each_with_index.map do |chr, i|
-      chr.to_i * (10 - i)
-    end
+    sum = base[0].to_i * 10 +
+          base[1].to_i *  9 +
+          base[2].to_i *  8 +
+          base[3].to_i *  7 +
+          base[4].to_i *  6 +
+          base[5].to_i *  5 +
+          base[6].to_i *  4 +
+          base[7].to_i *  3 +
+          base[8].to_i *  2
 
-    remainder = products.inject(0) {|m, v| m + v} % 11
+    remainder = sum % 11
+
     case remainder
       when 0
-        0
+        "0"
       when 1
-        'X'
+        "X"
       else
-        11 - remainder
-    end.to_s
+        (11 - remainder).to_s
+    end
   end
 
   def isbn_13_checksum
     base = (isbn.length == 13 ? '' : '978') + isbn[0..-2]
 
-    products = base.each_char.each_with_index.map do |chr, i|
-      chr.to_i * (i % 2 == 0 ? 1 : 3)
-    end
+    sum = (
+            base[1].to_i +
+            base[3].to_i +
+            base[5].to_i +
+            base[7].to_i +
+            base[9].to_i +
+            base[11].to_i
+          ) * 3 +
+          base[0].to_i +
+          base[2].to_i +
+          base[4].to_i +
+          base[6].to_i +
+          base[8].to_i +
+          base[10].to_i +
+          base[12].to_i
 
-    remainder = products.inject(0) {|m, v| m + v} % 10
-    (remainder == 0 ? 0 : 10 - remainder).to_s
+    (10 - sum % 10).to_s[-1]
   end
 
   cache_method :isbn, :valid?, :isbn10, :isbn13, :parts, :isbn_10_checksum, :isbn_13_checksum
