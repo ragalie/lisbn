@@ -12,9 +12,11 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "lisbn"
   gem.require_paths = ["lib"]
-  gem.version       = "0.2.2"
+  gem.version       = "0.2.4"
 
   gem.add_dependency "nori", "~> 2.0"
   gem.add_dependency "nokogiri"
+  gem.add_development_dependency "multi_json"
+  gem.add_development_dependency "rake"
   gem.add_development_dependency "rspec"
 end
