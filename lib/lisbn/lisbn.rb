@@ -17,8 +17,10 @@ class Lisbn < String
   end
 
   def isbn_with_dash
-    if valid_isbn_13? && parts
-      parts.join("-")
+    if valid_isbn_13? && parts5 = parts(5)
+      parts5.join("-")
+    elsif valid_isbn_10? && parts4 = parts(4)
+      parts4.join("-")
     elsif isbn.length > 3
       isbn[0..-2] + "-" + isbn[-1]
     else

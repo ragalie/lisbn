@@ -69,8 +69,16 @@ describe "Lisbn" do
     context "with a 10-digit ISBN" do
       let(:isbn) { "1402780591" }
 
+      it "returns the isbn with dashes between the parts" do
+        expect(subject.isbn_with_dash).to eq("1-4027-8059-1")
+      end
+    end
+
+    context "with an invalid 9-digit ISBN" do
+      let(:isbn) { "402780591" }
+
       it "returns the isbn with a dash before the checkdigit" do
-        expect(subject.isbn_with_dash).to eq("140278059-1")
+        expect(subject.isbn_with_dash).to eq("40278059-1")
       end
     end
 
