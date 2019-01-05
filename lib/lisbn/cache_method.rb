@@ -5,7 +5,7 @@ class Lisbn < String
         alias_method method + "_without_cache", method
         define_method method do |*args, &blk|
           @cache ||= {}
-          @cache[[method, self]] ||= send(method + "_without_cache", *args, &blk)
+          @cache[[method, args, blk, self]] ||= send(method + "_without_cache", *args, &blk)
         end
       end
     end
