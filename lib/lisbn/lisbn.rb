@@ -87,9 +87,9 @@ class Lisbn < String
     prefix = sprintf("%0#{prefix[:length]}d", prefix[:number])
 
     if parts == 4
-      [group[3..-1], prefix, isbn10[(group[3..-1].length + prefix.length)..-2], isbn[-1..-1]]
+      [group[3..-1], prefix, isbn10[(group[3..-1].length + prefix.length)..-2], isbn10[-1..-1]]
     else
-      [group[0..2], group[3..-1], prefix, isbn[(group.length + prefix.length)..-2], isbn[-1..-1]]
+      [group[0..2], group[3..-1], prefix, isbn13[(group.length + prefix.length)..-2], isbn13[-1..-1]]
     end
   end
 

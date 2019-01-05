@@ -162,6 +162,11 @@ describe "Lisbn" do
       expect(lisbn.parts).to be_nil
     end
 
+    it "uses the correct check digit if provided an isbn10" do
+      lisbn = Lisbn.new("0906212731")
+      expect(lisbn.parts).to eq(["978", "0", "906212", "73", "8"])
+    end
+
     context "4 parts variant" do
       it "splits isbn10 for parts with argument" do
         lisbn = Lisbn.new("832100928X")
@@ -175,6 +180,11 @@ describe "Lisbn" do
 
       it "works correctly with long publisher identifier (Tarquin Publications)" do
         lisbn = Lisbn.new("0906212731")
+        expect(lisbn.parts(4)).to eq(["0", "906212", "73", "1"])
+      end
+
+      it "uses the correct check digit if provided an isbn13" do
+        lisbn = Lisbn.new("9780906212738")
         expect(lisbn.parts(4)).to eq(["0", "906212", "73", "1"])
       end
 
