@@ -45,18 +45,21 @@ class Lisbn < String
     '978' + isbn[0..-2] + isbn_13_checksum
   end
 
-  # Returns an Array with the 'parts' of the ISBN-13 in left-to-right order.
+  # Returns an Array with the 'parts' of the ISBN in left-to-right order.
   # The parts of an ISBN are as follows:
-  #   - GS1 prefix
+  #   - GS1 prefix (only for ISBN-13)
   #   - Group identifier
   #   - Prefix/publisher code
   #   - Item number
   #   - Check digit
   #
   # Returns nil if the ISBN is not valid.
+  # Returns nil if parts argument is 4 but ISBN-10 does not exist
   # Returns nil if the group and prefix cannot be identified.
-  def parts
+  def parts(parts = 5)
+    raise ArgumentError, "Parts must be either 4 or 5." unless parts == 4 || parts == 5
     return unless isbn13
+    return if parts == 4 && !isbn10
 
     group = prefix = nil
 
@@ -80,7 +83,12 @@ class Lisbn < String
     return unless group && prefix
 
     prefix = sprintf("%0#{prefix[:length]}d", prefix[:number])
-    [group[0..2], group[3..-1], prefix, isbn13[(group.length + prefix.length)..-2], isbn13[-1..-1]]
+
+    if parts == 4
+      [group[3..-1], prefix, isbn10[(group[3..-1].length + prefix.length)..-2], isbn[-1..-1]]
+    else
+      [group[0..2], group[3..-1], prefix, isbn[(group.length + prefix.length)..-2], isbn[-1..-1]]
+    end
   end
 
   def isbn_10_checksum

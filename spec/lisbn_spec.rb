@@ -141,9 +141,49 @@ describe "Lisbn" do
       lisbn.parts.should == ["978", "601", "7002", "01", "5"]
     end
 
+    it "should raise ArgumentError for anything other than 4 or 5" do
+      expect { subject.parts(3) }.to raise_error(ArgumentError)
+    end
+
+    it "splits into the right groups with number argument" do
+      subject.parts(5).should == ["978", "0", "00", "000000", "2"]
+    end
+
     it "returns nil if it can't find a valid group" do
       lisbn = Lisbn.new("9780100000002")
       lisbn.parts.should be_nil
+    end
+
+    context "4 parts variant" do
+      it "splits isbn10 for parts with argument" do
+        lisbn = Lisbn.new("832100928X")
+        lisbn.parts(4).should == ["83", "210", "0928", "X"]
+      end
+
+      it "works correctly for publisher identifier (CRC Press)" do
+        lisbn = Lisbn.new("0849304768")
+        lisbn.parts(4).should == ["0", "8493", "0476", "8"]
+      end
+
+      it "works correctly with long publisher identifier (Tarquin Publications)" do
+        lisbn = Lisbn.new("0906212731")
+        lisbn.parts(4).should == ["0", "906212", "73", "1"]
+      end
+
+      it "splits isbn10 for parts for initial isbn13" do
+        lisbn = Lisbn.new("9786017002015")
+        lisbn.parts(4).should == ["601", "7002", "01", "5"]
+      end
+
+      it 'returns nil if ISBN-10 equivalent doesnt exists' do
+        lisbn = Lisbn.new("979-11-86178-14-0")
+        lisbn.parts(4).should be_nil
+      end
+
+      it "returns nil if it can't find a valid group" do
+        lisbn = Lisbn.new("9780100000002")
+        lisbn.parts(4).should be_nil
+      end
     end
   end
 
