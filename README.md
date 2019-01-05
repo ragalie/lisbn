@@ -1,5 +1,7 @@
 # Lisbn
 
+[![Build Status](https://travis-ci.org/ragalie/lisbn.svg?branch=master)](https://travis-ci.org/ragalie/lisbn)
+
 Lisbn (pronounced "Lisbon") is a wrapper around String that adds methods for manipulating
 [ISBNs](http://en.wikipedia.org/wiki/International_Standard_Book_Number).
 
@@ -58,3 +60,9 @@ Then run:
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Releasing
+
+1. Update the version in lisbn.gemspec using [semver](https://semver.org).
+2. Tag the version update commit as `vX.X.X` on the master branch.
+3. Push to github.
