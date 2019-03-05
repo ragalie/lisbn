@@ -7,17 +7,29 @@ class Lisbn < String
   # Returns true if the ISBN is valid, false otherwise.
   def valid?
     case isbn.length
+    when 10
+      valid_isbn_10?
+    when 13
+      valid_isbn_13?
+    else
+      false
+    end
+  end
+
+  # Returns true if the ISBN is valid, false otherwise.
+  def valid_checksum?
+    case isbn.length
       when 10
-        valid_isbn_10?
+        valid_checksum_isbn_10?
       when 13
-        valid_isbn_13?
+        valid_checksum_isbn_13?
       else
         false
     end
   end
 
   def isbn_with_dash
-    if valid_isbn_13? && parts
+    if valid_checksum_isbn_13? && parts
       parts.join("-")
     elsif isbn.length > 3
       isbn[0..-2] + "-" + isbn[-1]
@@ -29,7 +41,7 @@ class Lisbn < String
   # Returns a valid ISBN in ISBN-10 format.
   # Returns nil if the ISBN is invalid or incapable of conversion to ISBN-10.
   def isbn10
-    return unless valid?
+    return unless valid_checksum?
     return isbn if isbn.length == 10
     return unless isbn[0..2] == "978"
 
@@ -39,7 +51,7 @@ class Lisbn < String
   # Returns a valid ISBN in ISBN-13 format.
   # Returns nil if the ISBN is invalid.
   def isbn13
-    return unless valid?
+    return unless valid_checksum?
     return isbn if isbn.length == 13
 
     '978' + isbn[0..-2] + isbn_13_checksum
@@ -142,14 +154,22 @@ class Lisbn < String
 
 private
 
-  def valid_isbn_10?
+  def valid_checksum_isbn_10?
     return false unless isbn.match(/^[0-9]{9}[0-9X]$/)
     isbn[-1..-1] == isbn_10_checksum
   end
 
-  def valid_isbn_13?
+  def valid_checksum_isbn_13?
     return false unless isbn.match(/^[0-9]{13}$/)
     isbn[-1..-1] == isbn_13_checksum
+  end
+
+  def valid_isbn_10?
+    !parts(4).blank?
+  end
+
+  def valid_isbn_13?
+    !parts.blank?
   end
 
   RANGES = YAML::load_file(File.dirname(__FILE__) + "/../../data/ranges.yml")
