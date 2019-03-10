@@ -41,7 +41,7 @@ class Lisbn < String
   # Returns a valid ISBN in ISBN-10 format.
   # Returns nil if the ISBN is invalid or incapable of conversion to ISBN-10.
   def isbn10
-    return unless valid_checksum?
+    return unless valid?
     return isbn if isbn.length == 10
     return unless isbn[0..2] == "978"
 
@@ -150,7 +150,7 @@ class Lisbn < String
     (10 - sum % 10).to_s[-1]
   end
 
-  cache_method :isbn, :valid?, :isbn10, :isbn13, :parts, :isbn_10_checksum, :isbn_13_checksum
+  cache_method :isbn, :valid?, :valid_checksum?, :isbn10, :isbn13, :parts, :isbn_10_checksum, :isbn_13_checksum
 
 private
 
