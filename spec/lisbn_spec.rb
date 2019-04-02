@@ -219,4 +219,28 @@ describe "Lisbn" do
       expect(subject.split("7")).to eq(["9", "80000000002"])
     end
   end
+
+  describe "#scan_isbns" do
+    it "should find two ISBN-13s in this sentence and return an array" do
+      isbns = Lisbn.new("Hi, I'm looking for 9780000000002 or 978-601-7002-01-5.").scan_isbns
+      isbns.should be_kind_of Array
+      isbns.size.should == 2
+      isbns[0].should == "9780000000002"
+      isbns[1].isbn.should == "9786017002015"
+    end
+
+    it "should take a block" do
+      isbns = 0
+      Lisbn.new("Hi, I'm looking for 9780000000002 or 978-601-7002-01-5.").scan_isbns do |isbn|
+        isbn.should be_kind_of Lisbn
+        isbns += 1
+      end
+      isbns.should == 2
+    end
+
+    it "should return an empty array when no ISBNs are present" do
+      Lisbn.new("nothing to see here").scan_isbns.should == []
+    end
+  end
+
 end
