@@ -17,8 +17,10 @@ class Lisbn < String
   end
 
   def isbn_with_dash
-    if valid_isbn_13? && parts
-      parts.join("-")
+    if valid_isbn_13? && parts5 = parts(5)
+      parts5.join("-")
+    elsif valid_isbn_10? && parts4 = parts(4)
+      parts4.join("-")
     elsif isbn.length > 3
       isbn[0..-2] + "-" + isbn[-1]
     else
@@ -45,18 +47,21 @@ class Lisbn < String
     '978' + isbn[0..-2] + isbn_13_checksum
   end
 
-  # Returns an Array with the 'parts' of the ISBN-13 in left-to-right order.
+  # Returns an Array with the 'parts' of the ISBN in left-to-right order.
   # The parts of an ISBN are as follows:
-  #   - GS1 prefix
+  #   - GS1 prefix (only for ISBN-13)
   #   - Group identifier
   #   - Prefix/publisher code
   #   - Item number
   #   - Check digit
   #
   # Returns nil if the ISBN is not valid.
+  # Returns nil if parts argument is 4 but ISBN-10 does not exist
   # Returns nil if the group and prefix cannot be identified.
-  def parts
+  def parts(parts = 5)
+    raise ArgumentError, "Parts must be either 4 or 5." unless parts == 4 || parts == 5
     return unless isbn13
+    return if parts == 4 && !isbn10
 
     group = prefix = nil
 
@@ -80,36 +85,59 @@ class Lisbn < String
     return unless group && prefix
 
     prefix = sprintf("%0#{prefix[:length]}d", prefix[:number])
-    [group[0..2], group[3..-1], prefix, isbn13[(group.length + prefix.length)..-2], isbn13[-1..-1]]
+
+    if parts == 4
+      [group[3..-1], prefix, isbn10[(group[3..-1].length + prefix.length)..-2], isbn10[-1..-1]]
+    else
+      [group[0..2], group[3..-1], prefix, isbn13[(group.length + prefix.length)..-2], isbn13[-1..-1]]
+    end
   end
 
   def isbn_10_checksum
     base = isbn.length == 13 ? isbn[3..-2] : isbn[0..-2]
 
-    products = base.each_char.each_with_index.map do |chr, i|
-      chr.to_i * (10 - i)
-    end
+    sum = base[0].to_i * 10 +
+          base[1].to_i *  9 +
+          base[2].to_i *  8 +
+          base[3].to_i *  7 +
+          base[4].to_i *  6 +
+          base[5].to_i *  5 +
+          base[6].to_i *  4 +
+          base[7].to_i *  3 +
+          base[8].to_i *  2
 
-    remainder = products.inject(0) {|m, v| m + v} % 11
+    remainder = sum % 11
+
     case remainder
       when 0
-        0
+        "0"
       when 1
-        'X'
+        "X"
       else
-        11 - remainder
-    end.to_s
+        (11 - remainder).to_s
+    end
   end
 
   def isbn_13_checksum
     base = (isbn.length == 13 ? '' : '978') + isbn[0..-2]
 
-    products = base.each_char.each_with_index.map do |chr, i|
-      chr.to_i * (i % 2 == 0 ? 1 : 3)
-    end
+    sum = (
+            base[1].to_i +
+            base[3].to_i +
+            base[5].to_i +
+            base[7].to_i +
+            base[9].to_i +
+            base[11].to_i
+          ) * 3 +
+          base[0].to_i +
+          base[2].to_i +
+          base[4].to_i +
+          base[6].to_i +
+          base[8].to_i +
+          base[10].to_i +
+          base[12].to_i
 
-    remainder = products.inject(0) {|m, v| m + v} % 10
-    (remainder == 0 ? 0 : 10 - remainder).to_s
+    (10 - sum % 10).to_s[-1]
   end
 
   cache_method :isbn, :valid?, :isbn10, :isbn13, :parts, :isbn_10_checksum, :isbn_13_checksum

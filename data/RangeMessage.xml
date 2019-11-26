@@ -17,8 +17,8 @@
 ]>
 <ISBNRangeMessage>
   <MessageSource>International ISBN Agency</MessageSource>
-  <MessageSerialNumber>96a56487-03a8-4f76-825d-0c39f4a857c0</MessageSerialNumber>
-  <MessageDate>Fri, 8 Dec 2017 09:55:25 CET</MessageDate>
+  <MessageSerialNumber>352b2404-54ce-4d18-828a-ed60209b93e1</MessageSerialNumber>
+  <MessageDate>Thu, 21 Dec 2017 17:54:41 CET</MessageDate>
   <EAN.UCCPrefixes>
     <EAN.UCC>
       <Prefix>978</Prefix>
@@ -1021,6 +1021,20 @@
         <Rule>
           <Range>9500000-9999999</Range>
           <Length>5</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-622</Prefix>
+      <Agency>Iran</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-0399999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>0400000-9999999</Range>
+          <Length>0</Length>
         </Rule>
       </Rules>
     </Group>
