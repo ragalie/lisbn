@@ -17,8 +17,8 @@
 ]>
 <ISBNRangeMessage>
   <MessageSource>International ISBN Agency</MessageSource>
-  <MessageSerialNumber>352b2404-54ce-4d18-828a-ed60209b93e1</MessageSerialNumber>
-  <MessageDate>Thu, 21 Dec 2017 17:54:41 CET</MessageDate>
+  <MessageSerialNumber>26a0fa8f-a3f4-4747-894d-3d28efeec40c</MessageSerialNumber>
+  <MessageDate>Tue, 19 Nov 2019 12:12:43 CET</MessageDate>
   <EAN.UCCPrefixes>
     <EAN.UCC>
       <Prefix>978</Prefix>
@@ -33,7 +33,11 @@
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>6500000-6999999</Range>
+          <Range>6500000-6599999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>6600000-6999999</Range>
           <Length>0</Length>
         </Rule>
         <Rule>
@@ -71,7 +75,15 @@
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>1300000-9999999</Range>
+          <Range>1300000-7999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>8000000-8999999</Range>
+          <Length>1</Length>
+        </Rule>
+        <Rule>
+          <Range>9000000-9999999</Range>
           <Length>0</Length>
         </Rule>
       </Rules>
@@ -95,15 +107,23 @@
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>2290000-6389999</Range>
+          <Range>2290000-3689999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>6390000-6398999</Range>
+          <Range>3690000-3699999</Range>
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>6399000-6399999</Range>
+          <Range>3700000-6389999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>6390000-6397999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>6398000-6399999</Range>
           <Length>7</Length>
         </Rule>
         <Rule>
@@ -149,20 +169,48 @@
       <Agency>English language</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-0999999</Range>
-          <Length>2</Length>
-        </Rule>
-        <Rule>
-          <Range>1000000-3999999</Range>
+          <Range>0000000-0099999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>4000000-5499999</Range>
+          <Range>0100000-0699999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>0700000-0999999</Range>
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>5500000-7319999</Range>
+          <Range>1000000-3979999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>3980000-5499999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>5500000-6699999</Range>
           <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>6700000-6799999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>6800000-6859999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>6860000-7139999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>7140000-7169999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>7170000-7319999</Range>
+          <Length>4</Length>
         </Rule>
         <Rule>
           <Range>7320000-7399999</Range>
@@ -177,11 +225,51 @@
           <Length>7</Length>
         </Rule>
         <Rule>
-          <Range>7754000-8697999</Range>
+          <Range>7754000-7763999</Range>
           <Length>5</Length>
         </Rule>
         <Rule>
-          <Range>8698000-9729999</Range>
+          <Range>7764000-7764999</Range>
+          <Length>7</Length>
+        </Rule>
+        <Rule>
+          <Range>7765000-7769999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>7770000-7776999</Range>
+          <Length>7</Length>
+        </Rule>
+        <Rule>
+          <Range>7777000-7899999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>7900000-7999999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>8000000-8671999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>8672000-8675999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>8676000-8697999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>8698000-9159999</Range>
+          <Length>6</Length>
+        </Rule>
+        <Rule>
+          <Range>9160000-9165059</Range>
+          <Length>7</Length>
+        </Rule>
+        <Rule>
+          <Range>9165060-9729999</Range>
           <Length>6</Length>
         </Rule>
         <Rule>
@@ -223,7 +311,19 @@
           <Length>6</Length>
         </Rule>
         <Rule>
-          <Range>4950000-6999999</Range>
+          <Range>4950000-4959999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>4960000-4966999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>4967000-4969999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>4970000-6999999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
@@ -309,15 +409,11 @@
           <Length>5</Length>
         </Rule>
         <Rule>
-          <Range>9700000-9899999</Range>
+          <Range>9700000-9849999</Range>
           <Length>7</Length>
         </Rule>
         <Rule>
-          <Range>9900000-9949999</Range>
-          <Length>5</Length>
-        </Rule>
-        <Rule>
-          <Range>9950000-9999999</Range>
+          <Range>9850000-9999999</Range>
           <Length>5</Length>
         </Rule>
       </Rules>
@@ -515,23 +611,11 @@
       <Agency>Indonesia</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-0799999</Range>
+          <Range>0000000-0699999</Range>
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>0800000-0899999</Range>
-          <Length>4</Length>
-        </Rule>
-        <Rule>
-          <Range>0900000-1099999</Range>
-          <Length>4</Length>
-        </Rule>
-        <Rule>
-          <Range>1100000-1199999</Range>
-          <Length>4</Length>
-        </Rule>
-        <Rule>
-          <Range>1200000-1399999</Range>
+          <Range>0700000-1399999</Range>
           <Length>4</Length>
         </Rule>
         <Rule>
@@ -543,15 +627,7 @@
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>1700000-1799999</Range>
-          <Length>5</Length>
-        </Rule>
-        <Rule>
-          <Range>1800000-1899999</Range>
-          <Length>5</Length>
-        </Rule>
-        <Rule>
-          <Range>1900000-1999999</Range>
+          <Range>1700000-1999999</Range>
           <Length>5</Length>
         </Rule>
         <Rule>
@@ -571,11 +647,7 @@
           <Length>5</Length>
         </Rule>
         <Rule>
-          <Range>6200000-6749999</Range>
-          <Length>4</Length>
-        </Rule>
-        <Rule>
-          <Range>6750000-6999999</Range>
+          <Range>6200000-6999999</Range>
           <Length>4</Length>
         </Rule>
         <Rule>
@@ -583,11 +655,7 @@
           <Length>5</Length>
         </Rule>
         <Rule>
-          <Range>7500000-7999999</Range>
-          <Length>4</Length>
-        </Rule>
-        <Rule>
-          <Range>8000000-9499999</Range>
+          <Range>7500000-9499999</Range>
           <Length>4</Length>
         </Rule>
         <Rule>
@@ -649,11 +717,7 @@
       <Agency>Turkey</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-0099999</Range>
-          <Length>0</Length>
-        </Rule>
-        <Rule>
-          <Range>0100000-0299999</Range>
+          <Range>0000000-0299999</Range>
           <Length>2</Length>
         </Rule>
         <Rule>
@@ -681,7 +745,15 @@
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>6000000-8999999</Range>
+          <Range>6000000-7499999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>7500000-7999999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>8000000-8999999</Range>
           <Length>5</Length>
         </Rule>
         <Rule>
@@ -695,11 +767,11 @@
       <Agency>Romania</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-0999999</Range>
+          <Range>0000000-0899999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>1000000-4999999</Range>
+          <Range>0900000-4999999</Range>
           <Length>2</Length>
         </Rule>
         <Rule>
@@ -715,8 +787,12 @@
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>9200000-9749999</Range>
+          <Range>9200000-9649999</Range>
           <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>9650000-9749999</Range>
+          <Length>4</Length>
         </Rule>
         <Rule>
           <Range>9750000-9999999</Range>
@@ -1029,11 +1105,171 @@
       <Agency>Iran</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-0399999</Range>
+          <Range>0000000-0899999</Range>
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>0400000-9999999</Range>
+          <Range>0900000-1999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>2000000-2999999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>3000000-5999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>6000000-7499999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>7500000-9499999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9500000-9999999</Range>
+          <Length>5</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-623</Prefix>
+      <Agency>Indonesia</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-0999999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>1000000-1999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>2000000-2999999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>3000000-6999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>7000000-7999999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>8000000-8999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9000000-9999999</Range>
+          <Length>5</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-624</Prefix>
+      <Agency>Sri Lanka</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-0499999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>0500000-1999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>2000000-2499999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>2500000-4999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>5000000-5999999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>6000000-9499999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9500000-9999999</Range>
+          <Length>5</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-625</Prefix>
+      <Agency>Turkey</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-0099999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>0100000-3999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>4000000-4499999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>4500000-6999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>7000000-7999999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>8000000-9999999</Range>
+          <Length>0</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-65</Prefix>
+      <Agency>Brazil</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-2999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>3000000-3029999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>3030000-4999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>5000000-5104999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>5105000-7999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>8000000-8169999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>8170000-8999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9000000-9019999</Range>
+          <Length>6</Length>
+        </Rule>
+        <Rule>
+          <Range>9020000-9999999</Range>
           <Length>0</Length>
         </Rule>
       </Rules>
@@ -1085,8 +1321,12 @@
           <Length>5</Length>
         </Rule>
         <Rule>
-          <Range>9000000-9999999</Range>
+          <Range>9000000-9989999</Range>
           <Length>6</Length>
+        </Rule>
+        <Rule>
+          <Range>9990000-9999999</Range>
+          <Length>5</Length>
         </Rule>
       </Rules>
     </Group>
@@ -1181,8 +1421,12 @@
       <Agency>Spain</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-1299999</Range>
+          <Range>0000000-1199999</Range>
           <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>1200000-1299999</Range>
+          <Length>6</Length>
         </Rule>
         <Rule>
           <Range>1300000-1399999</Range>
@@ -1267,8 +1511,32 @@
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>5340000-5439999</Range>
+          <Range>5340000-5399999</Range>
           <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>5400000-5402999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>5403000-5403999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>5404000-5404999</Range>
+          <Length>6</Length>
+        </Rule>
+        <Rule>
+          <Range>5405000-5408999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>5409000-5409999</Range>
+          <Length>6</Length>
+        </Rule>
+        <Rule>
+          <Range>5410000-5439999</Range>
+          <Length>5</Length>
         </Rule>
         <Rule>
           <Range>5440000-5479999</Range>
@@ -1393,7 +1661,23 @@
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>2000000-3269999</Range>
+          <Range>2000000-3119999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>3120000-3149999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>3150000-3189999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>3190000-3229999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>3230000-3269999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
@@ -1401,7 +1685,23 @@
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>3390000-5999999</Range>
+          <Range>3390000-3609999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>3610000-3629999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>3630000-5489999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>5490000-5549999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>5550000-5999999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
@@ -1417,11 +1717,11 @@
           <Length>6</Length>
         </Rule>
         <Rule>
-          <Range>9100000-9299999</Range>
+          <Range>9100000-9269999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>9300000-9399999</Range>
+          <Range>9270000-9399999</Range>
           <Length>4</Length>
         </Rule>
         <Rule>
@@ -1429,11 +1729,7 @@
           <Length>6</Length>
         </Rule>
         <Rule>
-          <Range>9480000-9499999</Range>
-          <Length>5</Length>
-        </Rule>
-        <Rule>
-          <Range>9500000-9999999</Range>
+          <Range>9480000-9999999</Range>
           <Length>5</Length>
         </Rule>
       </Rules>
@@ -1539,11 +1835,11 @@
           <Length>0</Length>
         </Rule>
         <Rule>
-          <Range>7000000-7999999</Range>
+          <Range>7000000-8199999</Range>
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>8000000-8499999</Range>
+          <Range>8200000-8499999</Range>
           <Length>0</Length>
         </Rule>
         <Rule>
@@ -1741,8 +2037,20 @@
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>1500000-5099999</Range>
+          <Range>1500000-4799999</Range>
           <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>4800000-4999999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>5000000-5009999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>5010000-5099999</Range>
+          <Length>5</Length>
         </Rule>
         <Rule>
           <Range>5100000-5499999</Range>
@@ -1801,8 +2109,16 @@
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>2000000-3599999</Range>
+          <Range>2000000-3399999</Range>
           <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>3400000-3549999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>3550000-3599999</Range>
+          <Length>5</Length>
         </Rule>
         <Rule>
           <Range>3600000-3799999</Range>
@@ -1829,11 +2145,15 @@
           <Length>5</Length>
         </Rule>
         <Rule>
-          <Range>5500000-7199999</Range>
+          <Range>5500000-7109999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>7200000-9499999</Range>
+          <Range>7110000-7149999</Range>
+          <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>7150000-9499999</Range>
           <Length>4</Length>
         </Rule>
         <Rule>
@@ -1923,19 +2243,23 @@
       <Agency>Colombia</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-5399999</Range>
+          <Range>0000000-5099999</Range>
           <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>5100000-5199999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>5200000-5399999</Range>
+          <Length>5</Length>
         </Rule>
         <Rule>
           <Range>5400000-5599999</Range>
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>5600000-5699999</Range>
-          <Length>5</Length>
-        </Rule>
-        <Rule>
-          <Range>5700000-5999999</Range>
+          <Range>5600000-5999999</Range>
           <Length>5</Length>
         </Rule>
         <Rule>
@@ -2593,8 +2917,12 @@
           <Length>5</Length>
         </Rule>
         <Rule>
-          <Range>9000000-9999999</Range>
+          <Range>9000000-9899999</Range>
           <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>9900000-9999999</Range>
+          <Length>3</Length>
         </Rule>
       </Rules>
     </Group>
@@ -2689,8 +3017,12 @@
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>1700000-1999999</Range>
+          <Range>1700000-1799999</Range>
           <Length>5</Length>
+        </Rule>
+        <Rule>
+          <Range>1800000-1999999</Range>
+          <Length>2</Length>
         </Rule>
         <Rule>
           <Range>2000000-2999999</Range>
@@ -2813,8 +3145,12 @@
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>6000000-8999999</Range>
+          <Range>6000000-8799999</Range>
           <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>8800000-8999999</Range>
+          <Length>3</Length>
         </Rule>
         <Rule>
           <Range>9000000-9999999</Range>
@@ -2831,11 +3167,11 @@
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>1200000-5599999</Range>
+          <Range>1200000-5399999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>5600000-7999999</Range>
+          <Range>5400000-7999999</Range>
           <Length>4</Length>
         </Rule>
         <Rule>
@@ -2889,8 +3225,16 @@
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>5000000-8999999</Range>
+          <Range>5000000-8299999</Range>
           <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>8300000-8499999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>8500000-8999999</Range>
+          <Length>2</Length>
         </Rule>
         <Rule>
           <Range>9000000-9499999</Range>
@@ -2911,20 +3255,16 @@
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>1200000-1499999</Range>
+          <Range>1200000-1999999</Range>
           <Length>5</Length>
         </Rule>
         <Rule>
-          <Range>1500000-1699999</Range>
-          <Length>5</Length>
-        </Rule>
-        <Rule>
-          <Range>1700000-1999999</Range>
-          <Length>5</Length>
-        </Rule>
-        <Rule>
-          <Range>2000000-7699999</Range>
+          <Range>2000000-7399999</Range>
           <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>7400000-7699999</Range>
+          <Length>5</Length>
         </Rule>
         <Rule>
           <Range>7700000-7999999</Range>
@@ -2967,6 +3307,134 @@
         <Rule>
           <Range>9500000-9999999</Range>
           <Length>5</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-9917</Prefix>
+      <Agency>Bolivia</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-0999999</Range>
+          <Length>1</Length>
+        </Rule>
+        <Rule>
+          <Range>1000000-2999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>3000000-3499999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>3500000-5999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>6000000-6999999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>7000000-9799999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9800000-9999999</Range>
+          <Length>4</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-9918</Prefix>
+      <Agency>Malta</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-0999999</Range>
+          <Length>1</Length>
+        </Rule>
+        <Rule>
+          <Range>1000000-1999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>2000000-2999999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>3000000-5999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>6000000-7999999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>8000000-9499999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9500000-9999999</Range>
+          <Length>4</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-9919</Prefix>
+      <Agency>Mongolia</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-1999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>2000000-2799999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>2800000-4999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>5000000-5999999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>6000000-9499999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9500000-9999999</Range>
+          <Length>4</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-9920</Prefix>
+      <Agency>Morocco</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-3499999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>3500000-3999999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>4000000-6249999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>6250000-7999999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>8000000-9299999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9300000-9999999</Range>
+          <Length>4</Length>
         </Rule>
       </Rules>
     </Group>
@@ -3403,8 +3871,12 @@
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>9000000-9999999</Range>
+          <Range>9000000-9799999</Range>
           <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>9800000-9999999</Range>
+          <Length>2</Length>
         </Rule>
       </Rules>
     </Group>
@@ -3421,8 +3893,16 @@
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>5000000-8999999</Range>
+          <Range>5000000-8399999</Range>
           <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>8400000-8699999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>8700000-8999999</Range>
+          <Length>4</Length>
         </Rule>
         <Rule>
           <Range>9000000-9999999</Range>
@@ -3635,8 +4115,12 @@
       <Agency>Estonia</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-0999999</Range>
-          <Length>1</Length>
+          <Range>0000000-0899999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>0900000-0999999</Range>
+          <Length>3</Length>
         </Rule>
         <Rule>
           <Range>1000000-3999999</Range>
@@ -4077,8 +4561,12 @@
       <Agency>Kenya</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-1499999</Range>
+          <Range>0000000-1399999</Range>
           <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>1400000-1499999</Range>
+          <Length>2</Length>
         </Rule>
         <Rule>
           <Range>1500000-1999999</Range>
@@ -4093,7 +4581,23 @@
           <Length>4</Length>
         </Rule>
         <Rule>
-          <Range>7500000-9599999</Range>
+          <Range>7500000-8209999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>8210000-8249999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>8250000-8259999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>8260000-8289999</Range>
+          <Length>4</Length>
+        </Rule>
+        <Rule>
+          <Range>8290000-9599999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
@@ -4977,23 +5481,11 @@
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>4000000-6999999</Range>
+          <Range>4000000-7999999</Range>
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>7000000-7999999</Range>
-          <Length>2</Length>
-        </Rule>
-        <Rule>
-          <Range>8000000-8499999</Range>
-          <Length>3</Length>
-        </Rule>
-        <Rule>
-          <Range>8500000-8999999</Range>
-          <Length>3</Length>
-        </Rule>
-        <Rule>
-          <Range>9000000-9999999</Range>
+          <Range>8000000-9999999</Range>
           <Length>3</Length>
         </Rule>
       </Rules>
@@ -5717,11 +6209,11 @@
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>8000000-9399999</Range>
+          <Range>8000000-9499999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>9400000-9999999</Range>
+          <Range>9500000-9999999</Range>
           <Length>2</Length>
         </Rule>
       </Rules>
@@ -5793,11 +6285,11 @@
           <Length>1</Length>
         </Rule>
         <Rule>
-          <Range>3000000-3999999</Range>
+          <Range>3000000-3699999</Range>
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>4000000-8999999</Range>
+          <Range>3700000-8999999</Range>
           <Length>2</Length>
         </Rule>
         <Rule>
@@ -5913,20 +6405,16 @@
       <Agency>Paraguay</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-1999999</Range>
+          <Range>0000000-0999999</Range>
           <Length>1</Length>
         </Rule>
         <Rule>
-          <Range>2000000-5999999</Range>
+          <Range>1000000-5999999</Range>
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>6000000-8999999</Range>
+          <Range>6000000-9999999</Range>
           <Length>3</Length>
-        </Rule>
-        <Rule>
-          <Range>9000000-9999999</Range>
-          <Length>0</Length>
         </Rule>
       </Rules>
     </Group>
@@ -5993,11 +6481,11 @@
       <Agency>Myanmar</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-5999999</Range>
+          <Range>0000000-3999999</Range>
           <Length>1</Length>
         </Rule>
         <Rule>
-          <Range>6000000-8499999</Range>
+          <Range>4000000-8499999</Range>
           <Length>2</Length>
         </Rule>
         <Rule>
@@ -6047,11 +6535,27 @@
       <Agency>Bolivia</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-3999999</Range>
-          <Length>0</Length>
+          <Range>0000000-0999999</Range>
+          <Length>1</Length>
         </Rule>
         <Rule>
-          <Range>4000000-7999999</Range>
+          <Range>1000000-2599999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>2600000-3999999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>4000000-6399999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>6400000-6499999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>6500000-7999999</Range>
           <Length>2</Length>
         </Rule>
         <Rule>
@@ -6065,8 +6569,12 @@
       <Agency>Tajikistan</Agency>
       <Rules>
         <Rule>
-          <Range>0000000-3999999</Range>
+          <Range>0000000-2999999</Range>
           <Length>1</Length>
+        </Rule>
+        <Rule>
+          <Range>3000000-3999999</Range>
+          <Length>3</Length>
         </Rule>
         <Rule>
           <Range>4000000-7999999</Range>
@@ -6095,8 +6603,12 @@
           <Length>3</Length>
         </Rule>
         <Rule>
-          <Range>8000000-9999999</Range>
+          <Range>8000000-8999999</Range>
           <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9000000-9999999</Range>
+          <Length>3</Length>
         </Rule>
       </Rules>
     </Group>
@@ -6135,11 +6647,11 @@
           <Length>1</Length>
         </Rule>
         <Rule>
-          <Range>5000000-7999999</Range>
+          <Range>5000000-6999999</Range>
           <Length>2</Length>
         </Rule>
         <Rule>
-          <Range>8000000-9999999</Range>
+          <Range>7000000-9999999</Range>
           <Length>3</Length>
         </Rule>
       </Rules>
@@ -6184,6 +6696,88 @@
         </Rule>
         <Rule>
           <Range>8000000-9999999</Range>
+          <Length>3</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-99981</Prefix>
+      <Agency>Macau</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-1999999</Range>
+          <Length>1</Length>
+        </Rule>
+        <Rule>
+          <Range>2000000-2999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>3000000-4999999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>5000000-7999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>8000000-9999999</Range>
+          <Length>3</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-99982</Prefix>
+      <Agency>Benin</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-0999999</Range>
+          <Length>1</Length>
+        </Rule>
+        <Rule>
+          <Range>1000000-4999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>5000000-5999999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>6000000-8999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9000000-9499999</Range>
+          <Length>3</Length>
+        </Rule>
+        <Rule>
+          <Range>9500000-9999999</Range>
+          <Length>0</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-99983</Prefix>
+      <Agency>El Salvador</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-0999999</Range>
+          <Length>1</Length>
+        </Rule>
+        <Rule>
+          <Range>1000000-4999999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>5000000-6999999</Range>
+          <Length>2</Length>
+        </Rule>
+        <Rule>
+          <Range>7000000-9499999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9500000-9999999</Range>
           <Length>3</Length>
         </Rule>
       </Rules>
@@ -6254,6 +6848,24 @@
         </Rule>
         <Rule>
           <Range>2010000-9999999</Range>
+          <Length>0</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>979-8</Prefix>
+      <Agency>United States</Agency>
+      <Rules>
+        <Rule>
+          <Range>00000000-98499999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>9850000-9850009</Range>
+          <Length>7</Length>
+        </Rule>
+        <Rule>
+          <Range>98500100-99999999</Range>
           <Length>0</Length>
         </Rule>
       </Rules>

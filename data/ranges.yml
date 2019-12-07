@@ -17,16 +17,26 @@
   :length: 4
 - :range: !ruby/range
     begin: 229
+    end: 368
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 3690
+    end: 3699
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 370
     end: 638
     excl: false
   :length: 3
 - :range: !ruby/range
     begin: 6390
-    end: 6398
+    end: 6397
     excl: false
   :length: 4
 - :range: !ruby/range
-    begin: 6399000
+    begin: 6398000
     end: 6399999
     excl: false
   :length: 7
@@ -80,22 +90,57 @@
     begin: 0
     end: 9
     excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 1
+    end: 6
+    excl: false
   :length: 2
 - :range: !ruby/range
+    begin: 700
+    end: 999
+    excl: false
+  :length: 4
+- :range: !ruby/range
     begin: 100
-    end: 399
+    end: 397
     excl: false
   :length: 3
 - :range: !ruby/range
-    begin: 4000
+    begin: 3980
     end: 5499
     excl: false
   :length: 4
 - :range: !ruby/range
     begin: 55000
-    end: 73199
+    end: 66999
     excl: false
   :length: 5
+- :range: !ruby/range
+    begin: 6700
+    end: 6799
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 68000
+    end: 68599
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 6860
+    end: 7139
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 714
+    end: 716
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 7170
+    end: 7319
+    excl: false
+  :length: 4
 - :range: !ruby/range
     begin: 7320000
     end: 7399999
@@ -113,11 +158,61 @@
   :length: 7
 - :range: !ruby/range
     begin: 77540
+    end: 77639
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 7764000
+    end: 7764999
+    excl: false
+  :length: 7
+- :range: !ruby/range
+    begin: 77650
+    end: 77699
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 7770000
+    end: 7776999
+    excl: false
+  :length: 7
+- :range: !ruby/range
+    begin: 77770
+    end: 78999
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 7900
+    end: 7999
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 80000
+    end: 86719
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 8672
+    end: 8675
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 86760
     end: 86979
     excl: false
   :length: 5
 - :range: !ruby/range
     begin: 869800
+    end: 915999
+    excl: false
+  :length: 6
+- :range: !ruby/range
+    begin: 9160000
+    end: 9165059
+    excl: false
+  :length: 7
+- :range: !ruby/range
+    begin: 916506
     end: 972999
     excl: false
   :length: 6
@@ -164,6 +259,21 @@
   :length: 6
 - :range: !ruby/range
     begin: 495
+    end: 495
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 4960
+    end: 4966
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 49670
+    end: 49699
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 497
     end: 699
     excl: false
   :length: 3
@@ -265,16 +375,11 @@
   :length: 5
 - :range: !ruby/range
     begin: 9700000
-    end: 9899999
+    end: 9849999
     excl: false
   :length: 7
 - :range: !ruby/range
-    begin: 99000
-    end: 99499
-    excl: false
-  :length: 5
-- :range: !ruby/range
-    begin: 99500
+    begin: 98500
     end: 99999
     excl: false
   :length: 5
@@ -490,26 +595,11 @@
 '978602':
 - :range: !ruby/range
     begin: 0
-    end: 7
+    end: 6
     excl: false
   :length: 2
 - :range: !ruby/range
-    begin: 800
-    end: 899
-    excl: false
-  :length: 4
-- :range: !ruby/range
-    begin: 900
-    end: 1099
-    excl: false
-  :length: 4
-- :range: !ruby/range
-    begin: 1100
-    end: 1199
-    excl: false
-  :length: 4
-- :range: !ruby/range
-    begin: 1200
+    begin: 700
     end: 1399
     excl: false
   :length: 4
@@ -525,16 +615,6 @@
   :length: 4
 - :range: !ruby/range
     begin: 17000
-    end: 17999
-    excl: false
-  :length: 5
-- :range: !ruby/range
-    begin: 18000
-    end: 18999
-    excl: false
-  :length: 5
-- :range: !ruby/range
-    begin: 19000
     end: 19999
     excl: false
   :length: 5
@@ -560,11 +640,6 @@
   :length: 5
 - :range: !ruby/range
     begin: 6200
-    end: 6749
-    excl: false
-  :length: 4
-- :range: !ruby/range
-    begin: 6750
     end: 6999
     excl: false
   :length: 4
@@ -575,11 +650,6 @@
   :length: 5
 - :range: !ruby/range
     begin: 7500
-    end: 7999
-    excl: false
-  :length: 4
-- :range: !ruby/range
-    begin: 8000
     end: 9499
     excl: false
   :length: 4
@@ -637,7 +707,7 @@
   :length: 4
 '978605':
 - :range: !ruby/range
-    begin: 1
+    begin: 0
     end: 2
     excl: false
   :length: 2
@@ -673,6 +743,16 @@
   :length: 4
 - :range: !ruby/range
     begin: 60000
+    end: 74999
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 7500
+    end: 7999
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 80000
     end: 89999
     excl: false
   :length: 5
@@ -684,11 +764,11 @@
 '978606':
 - :range: !ruby/range
     begin: 0
-    end: 99
+    end: 89
     excl: false
   :length: 3
 - :range: !ruby/range
-    begin: 10
+    begin: 9
     end: 49
     excl: false
   :length: 2
@@ -709,9 +789,14 @@
   :length: 3
 - :range: !ruby/range
     begin: 92000
-    end: 97499
+    end: 96499
     excl: false
   :length: 5
+- :range: !ruby/range
+    begin: 9650
+    end: 9749
+    excl: false
+  :length: 4
 - :range: !ruby/range
     begin: 975
     end: 999
@@ -969,9 +1054,103 @@
 '978622':
 - :range: !ruby/range
     begin: 0
-    end: 3
+    end: 8
     excl: false
   :length: 2
+- :range: !ruby/range
+    begin: 200
+    end: 299
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 6000
+    end: 7499
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 95000
+    end: 99999
+    excl: false
+  :length: 5
+'978623':
+- :range: !ruby/range
+    begin: 0
+    end: 9
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 200
+    end: 299
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 7000
+    end: 7999
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 90000
+    end: 99999
+    excl: false
+  :length: 5
+'978624':
+- :range: !ruby/range
+    begin: 0
+    end: 4
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 200
+    end: 249
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 5000
+    end: 5999
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 95000
+    end: 99999
+    excl: false
+  :length: 5
+'978625':
+- :range: !ruby/range
+    begin: 0
+    end: 0
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 400
+    end: 449
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 7000
+    end: 7999
+    excl: false
+  :length: 4
+'97865':
+- :range: !ruby/range
+    begin: 300
+    end: 302
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 5000
+    end: 5104
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 80000
+    end: 81699
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 900000
+    end: 901999
+    excl: false
+  :length: 6
 '9787':
 - :range: !ruby/range
     begin: 0
@@ -1021,9 +1200,14 @@
   :length: 5
 - :range: !ruby/range
     begin: 900000
-    end: 999999
+    end: 998999
     excl: false
   :length: 6
+- :range: !ruby/range
+    begin: 99900
+    end: 99999
+    excl: false
+  :length: 5
 '97881':
 - :range: !ruby/range
     begin: 0
@@ -1115,9 +1299,14 @@
 '97884':
 - :range: !ruby/range
     begin: 0
-    end: 12
+    end: 11
     excl: false
   :length: 2
+- :range: !ruby/range
+    begin: 120000
+    end: 129999
+    excl: false
+  :length: 6
 - :range: !ruby/range
     begin: 1300
     end: 1399
@@ -1216,9 +1405,39 @@
   :length: 4
 - :range: !ruby/range
     begin: 534
-    end: 543
+    end: 539
     excl: false
   :length: 3
+- :range: !ruby/range
+    begin: 54000
+    end: 54029
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 54030
+    end: 54039
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 540400
+    end: 540499
+    excl: false
+  :length: 6
+- :range: !ruby/range
+    begin: 54050
+    end: 54089
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 540900
+    end: 540999
+    excl: false
+  :length: 6
+- :range: !ruby/range
+    begin: 54100
+    end: 54399
+    excl: false
+  :length: 5
 - :range: !ruby/range
     begin: 5440
     end: 5479
@@ -1334,6 +1553,26 @@
   :length: 2
 - :range: !ruby/range
     begin: 200
+    end: 311
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 31200
+    end: 31499
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 315
+    end: 318
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 31900
+    end: 32299
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 323
     end: 326
     excl: false
   :length: 3
@@ -1344,6 +1583,26 @@
   :length: 4
 - :range: !ruby/range
     begin: 339
+    end: 360
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 3610
+    end: 3629
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 363
+    end: 548
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 5490
+    end: 5549
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 555
     end: 599
     excl: false
   :length: 3
@@ -1364,11 +1623,11 @@
   :length: 6
 - :range: !ruby/range
     begin: 910
-    end: 929
+    end: 926
     excl: false
   :length: 3
 - :range: !ruby/range
-    begin: 9300
+    begin: 9270
     end: 9399
     excl: false
   :length: 4
@@ -1379,11 +1638,6 @@
   :length: 6
 - :range: !ruby/range
     begin: 94800
-    end: 94999
-    excl: false
-  :length: 5
-- :range: !ruby/range
-    begin: 95000
     end: 99999
     excl: false
   :length: 5
@@ -1482,7 +1736,7 @@
   :length: 3
 - :range: !ruby/range
     begin: 7000
-    end: 7999
+    end: 8199
     excl: false
   :length: 4
 - :range: !ruby/range
@@ -1679,9 +1933,24 @@
   :length: 2
 - :range: !ruby/range
     begin: 150
-    end: 509
+    end: 479
     excl: false
   :length: 3
+- :range: !ruby/range
+    begin: 48000
+    end: 49999
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 500
+    end: 500
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 50100
+    end: 50999
+    excl: false
+  :length: 5
 - :range: !ruby/range
     begin: 51
     end: 54
@@ -1741,9 +2010,19 @@
   :length: 4
 - :range: !ruby/range
     begin: 20
-    end: 35
+    end: 33
     excl: false
   :length: 2
+- :range: !ruby/range
+    begin: 3400
+    end: 3549
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 35500
+    end: 35999
+    excl: false
+  :length: 5
 - :range: !ruby/range
     begin: 3600
     end: 3799
@@ -1776,11 +2055,16 @@
   :length: 5
 - :range: !ruby/range
     begin: 550
-    end: 719
+    end: 710
     excl: false
   :length: 3
 - :range: !ruby/range
-    begin: 7200
+    begin: 71100
+    end: 71499
+    excl: false
+  :length: 5
+- :range: !ruby/range
+    begin: 7150
     end: 9499
     excl: false
   :length: 4
@@ -1874,9 +2158,19 @@
 '978958':
 - :range: !ruby/range
     begin: 0
-    end: 53
+    end: 50
     excl: false
   :length: 2
+- :range: !ruby/range
+    begin: 5100
+    end: 5199
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 52000
+    end: 53999
+    excl: false
+  :length: 5
 - :range: !ruby/range
     begin: 5400
     end: 5599
@@ -1884,11 +2178,6 @@
   :length: 4
 - :range: !ruby/range
     begin: 56000
-    end: 56999
-    excl: false
-  :length: 5
-- :range: !ruby/range
-    begin: 57000
     end: 59999
     excl: false
   :length: 5
@@ -2568,9 +2857,14 @@
   :length: 5
 - :range: !ruby/range
     begin: 90
-    end: 99
+    end: 98
     excl: false
   :length: 2
+- :range: !ruby/range
+    begin: 990
+    end: 999
+    excl: false
+  :length: 3
 '978978':
 - :range: !ruby/range
     begin: 0
@@ -2662,9 +2956,14 @@
   :length: 2
 - :range: !ruby/range
     begin: 17000
-    end: 19999
+    end: 17999
     excl: false
   :length: 5
+- :range: !ruby/range
+    begin: 18
+    end: 19
+    excl: false
+  :length: 2
 - :range: !ruby/range
     begin: 200
     end: 299
@@ -2791,9 +3090,14 @@
   :length: 3
 - :range: !ruby/range
     begin: 6000
-    end: 8999
+    end: 8799
     excl: false
   :length: 4
+- :range: !ruby/range
+    begin: 880
+    end: 899
+    excl: false
+  :length: 3
 - :range: !ruby/range
     begin: 90000
     end: 99999
@@ -2807,11 +3111,11 @@
   :length: 2
 - :range: !ruby/range
     begin: 120
-    end: 559
+    end: 539
     excl: false
   :length: 3
 - :range: !ruby/range
-    begin: 5600
+    begin: 5400
     end: 7999
     excl: false
   :length: 4
@@ -2873,9 +3177,19 @@
   :length: 4
 - :range: !ruby/range
     begin: 500
-    end: 899
+    end: 829
     excl: false
   :length: 3
+- :range: !ruby/range
+    begin: 8300
+    end: 8499
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 85
+    end: 89
+    excl: false
+  :length: 2
 - :range: !ruby/range
     begin: 9000
     end: 9499
@@ -2894,24 +3208,19 @@
   :length: 2
 - :range: !ruby/range
     begin: 12000
-    end: 14999
-    excl: false
-  :length: 5
-- :range: !ruby/range
-    begin: 15000
-    end: 16999
-    excl: false
-  :length: 5
-- :range: !ruby/range
-    begin: 17000
     end: 19999
     excl: false
   :length: 5
 - :range: !ruby/range
     begin: 200
-    end: 769
+    end: 739
     excl: false
   :length: 3
+- :range: !ruby/range
+    begin: 74000
+    end: 76999
+    excl: false
+  :length: 5
 - :range: !ruby/range
     begin: 77000
     end: 79999
@@ -2958,6 +3267,80 @@
     end: 99999
     excl: false
   :length: 5
+'9789917':
+- :range: !ruby/range
+    begin: 0
+    end: 0
+    excl: false
+  :length: 1
+- :range: !ruby/range
+    begin: 30
+    end: 34
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 600
+    end: 699
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 9800
+    end: 9999
+    excl: false
+  :length: 4
+'9789918':
+- :range: !ruby/range
+    begin: 0
+    end: 0
+    excl: false
+  :length: 1
+- :range: !ruby/range
+    begin: 20
+    end: 29
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 600
+    end: 799
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 9500
+    end: 9999
+    excl: false
+  :length: 4
+'9789919':
+- :range: !ruby/range
+    begin: 20
+    end: 27
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 500
+    end: 599
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 9500
+    end: 9999
+    excl: false
+  :length: 4
+'9789920':
+- :range: !ruby/range
+    begin: 35
+    end: 39
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 625
+    end: 799
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 9300
+    end: 9999
+    excl: false
+  :length: 4
 '9789921':
 - :range: !ruby/range
     begin: 0
@@ -3314,9 +3697,14 @@
   :length: 3
 - :range: !ruby/range
     begin: 9000
-    end: 9999
+    end: 9799
     excl: false
   :length: 4
+- :range: !ruby/range
+    begin: 98
+    end: 99
+    excl: false
+  :length: 2
 '9789940':
 - :range: !ruby/range
     begin: 0
@@ -3330,9 +3718,19 @@
   :length: 2
 - :range: !ruby/range
     begin: 500
-    end: 899
+    end: 839
     excl: false
   :length: 3
+- :range: !ruby/range
+    begin: 84
+    end: 86
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 8700
+    end: 8999
+    excl: false
+  :length: 4
 - :range: !ruby/range
     begin: 9000
     end: 9999
@@ -3539,9 +3937,14 @@
 '9789949':
 - :range: !ruby/range
     begin: 0
-    end: 0
+    end: 8
     excl: false
-  :length: 1
+  :length: 2
+- :range: !ruby/range
+    begin: 90
+    end: 99
+    excl: false
+  :length: 3
 - :range: !ruby/range
     begin: 10
     end: 39
@@ -3981,9 +4384,14 @@
 '9789966':
 - :range: !ruby/range
     begin: 0
-    end: 149
+    end: 139
     excl: false
   :length: 3
+- :range: !ruby/range
+    begin: 14
+    end: 14
+    excl: false
+  :length: 2
 - :range: !ruby/range
     begin: 1500
     end: 1999
@@ -4001,6 +4409,26 @@
   :length: 4
 - :range: !ruby/range
     begin: 750
+    end: 820
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 8210
+    end: 8249
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 825
+    end: 825
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 8260
+    end: 8289
+    excl: false
+  :length: 4
+- :range: !ruby/range
+    begin: 829
     end: 959
     excl: false
   :length: 3
@@ -4826,26 +5254,11 @@
   :length: 3
 - :range: !ruby/range
     begin: 40
-    end: 69
-    excl: false
-  :length: 2
-- :range: !ruby/range
-    begin: 70
     end: 79
     excl: false
   :length: 2
 - :range: !ruby/range
     begin: 800
-    end: 849
-    excl: false
-  :length: 3
-- :range: !ruby/range
-    begin: 850
-    end: 899
-    excl: false
-  :length: 3
-- :range: !ruby/range
-    begin: 900
     end: 999
     excl: false
   :length: 3
@@ -5499,11 +5912,11 @@
   :length: 2
 - :range: !ruby/range
     begin: 800
-    end: 939
+    end: 949
     excl: false
   :length: 3
 - :range: !ruby/range
-    begin: 94
+    begin: 95
     end: 99
     excl: false
   :length: 2
@@ -5568,11 +5981,11 @@
   :length: 1
 - :range: !ruby/range
     begin: 300
-    end: 399
+    end: 369
     excl: false
   :length: 3
 - :range: !ruby/range
-    begin: 40
+    begin: 37
     end: 89
     excl: false
   :length: 2
@@ -5679,17 +6092,17 @@
 '97899967':
 - :range: !ruby/range
     begin: 0
-    end: 1
+    end: 0
     excl: false
   :length: 1
 - :range: !ruby/range
-    begin: 20
+    begin: 10
     end: 59
     excl: false
   :length: 2
 - :range: !ruby/range
     begin: 600
-    end: 899
+    end: 999
     excl: false
   :length: 3
 '97899968':
@@ -5748,11 +6161,11 @@
 '97899971':
 - :range: !ruby/range
     begin: 0
-    end: 5
+    end: 3
     excl: false
   :length: 1
 - :range: !ruby/range
-    begin: 60
+    begin: 40
     end: 84
     excl: false
   :length: 2
@@ -5795,7 +6208,32 @@
   :length: 3
 '97899974':
 - :range: !ruby/range
+    begin: 0
+    end: 0
+    excl: false
+  :length: 1
+- :range: !ruby/range
+    begin: 10
+    end: 25
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 260
+    end: 399
+    excl: false
+  :length: 3
+- :range: !ruby/range
     begin: 40
+    end: 63
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 640
+    end: 649
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 65
     end: 79
     excl: false
   :length: 2
@@ -5807,9 +6245,14 @@
 '97899975':
 - :range: !ruby/range
     begin: 0
-    end: 3
+    end: 2
     excl: false
   :length: 1
+- :range: !ruby/range
+    begin: 300
+    end: 399
+    excl: false
+  :length: 3
 - :range: !ruby/range
     begin: 40
     end: 79
@@ -5836,6 +6279,11 @@
     end: 799
     excl: false
   :length: 3
+- :range: !ruby/range
+    begin: 900
+    end: 999
+    excl: false
+  :length: 3
 '97899977':
 - :range: !ruby/range
     begin: 0
@@ -5860,11 +6308,11 @@
   :length: 1
 - :range: !ruby/range
     begin: 50
-    end: 79
+    end: 69
     excl: false
   :length: 2
 - :range: !ruby/range
-    begin: 800
+    begin: 700
     end: 999
     excl: false
   :length: 3
@@ -5897,6 +6345,54 @@
   :length: 2
 - :range: !ruby/range
     begin: 800
+    end: 999
+    excl: false
+  :length: 3
+'97899981':
+- :range: !ruby/range
+    begin: 0
+    end: 1
+    excl: false
+  :length: 1
+- :range: !ruby/range
+    begin: 30
+    end: 49
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 800
+    end: 999
+    excl: false
+  :length: 3
+'97899982':
+- :range: !ruby/range
+    begin: 0
+    end: 0
+    excl: false
+  :length: 1
+- :range: !ruby/range
+    begin: 50
+    end: 59
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 900
+    end: 949
+    excl: false
+  :length: 3
+'97899983':
+- :range: !ruby/range
+    begin: 0
+    end: 0
+    excl: false
+  :length: 1
+- :range: !ruby/range
+    begin: 50
+    end: 69
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 950
     end: 999
     excl: false
   :length: 3
@@ -5958,3 +6454,9 @@
     end: 200
     excl: false
   :length: 3
+'9798':
+- :range: !ruby/range
+    begin: 9850000
+    end: 9850009
+    excl: false
+  :length: 7
