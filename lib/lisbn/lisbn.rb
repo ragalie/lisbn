@@ -154,5 +154,9 @@ private
     isbn[-1..-1] == isbn_13_checksum
   end
 
-  RANGES = YAML::load_file(File.dirname(__FILE__) + "/../../data/ranges.yml")
+  RANGES = if Gem::Version.new(Psych::VERSION) >= Gem::Version.new('4.0.0')
+    YAML::load_file(File.dirname(__FILE__) + "/../../data/ranges.yml", permitted_classes: [Range, Symbol])
+  else
+    YAML::load_file(File.dirname(__FILE__) + "/../../data/ranges.yml")
+  end
 end
