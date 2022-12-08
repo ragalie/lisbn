@@ -1,4 +1,21 @@
 class Lisbn < String
+
+  # Find an ISBN in a string of text
+  def scan_isbns
+    scan(/([\dX-]{10,})/i).flatten.map do |match|
+      isbn = self.class.new(match)
+      if isbn.valid?
+        if block_given?
+          yield isbn
+        else
+          isbn
+        end
+      else
+        nil
+      end
+    end.compact
+  end
+
   # Returns a normalized ISBN form
   def isbn
     upcase.gsub(/[^0-9X]/, '')
